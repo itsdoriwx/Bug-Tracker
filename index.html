@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Цілуйко Дар'я КН-31">
+  <title>Баг-трекер</title>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="top">
+    <div class="top__title">
+      <h1>Баг-трекер</h1>
+      <p id="project">Дані завантажуються з хмарного сховища..</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="summary" id="summary"></section>
+
+    <section class="toolbar">
+      <input type="search" id="search" placeholder="Пошук за назвою, ID або виконавцем">
+      <div class="filters" role="group">
+        <button class="filter is-active" data-status="all">Усі</button>
+        <button class="filter" data-status="open">Відкриті</button>
+        <button class="filter" data-status="in_progress">У роботі</button>
+        <button class="filter" data-status="resolved">Виправлені</button>
+      </div>
+    </section>
+
+    <section class="board" id="board" aria-live="polite">
+      <p class="state">Завантаження даних…</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
